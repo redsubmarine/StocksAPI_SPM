@@ -39,7 +39,7 @@ public struct QuoteResponse: Decodable {
 public struct Quote: Codable, Identifiable, Hashable {
     public let id = UUID()
     
-//    public let symbol: String
+    public let symbol: String
 
     public let currency: String?
     public let marketState: String?
@@ -71,7 +71,7 @@ public struct Quote: Codable, Identifiable, Hashable {
     public let trailingAnnualDividendYield: Double?
     public let epsTrailingTwelveMonths: Double?
     
-    public init(//symbol: String,
+    public init(symbol: String,
                 currency: String? = nil,
                 marketState: String? = nil,
                 fullExchangeName: String? = nil,
@@ -94,7 +94,7 @@ public struct Quote: Codable, Identifiable, Hashable {
                 averageDailyVolume3Month: Double? = nil,
                 trailingAnnualDividendYield: Double? = nil,
                 epsTrailingTwelveMonths: Double? = nil) {
-//        self.symbol = symbol
+        self.symbol = symbol
         self.currency = currency
         self.marketState = marketState
         self.fullExchangeName = fullExchangeName
